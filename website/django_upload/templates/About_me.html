@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body class="w3-content" style="max-width:1300px;background-color:black;">
+
+<!-- First Grid: Logo & About -->
+  <div class="w3-half w3-black w3-container w3-center" style="background-color:black;height:1000px">
+  <div class="w3-half w3-blue-grey w3-container" style="position:relative;top:20px;height:1000px;width:205%">
+    <div class="w3-padding-64 w3-center" style="width:100%">
+      <h1>About Me</h1>
+</br></br>
+      <img src="{% static "mypics.jpg" %}" class="w3-margin w3-circle" alt="Person" style="height:300px;width:300px" >
+      
+       	<h2> Brief Bio:</h2>
+                <p>
+                    I joined the Department of Computer Science and Engineering, ITER of  on 1st June,2017.<br/>
+                    I have completed my M.Tech in Computer Science and Data processing from IIT Kharagpur and  M.Sc in Mathematics from University of Allahabad.
+                </p>
+                <h2> Research Interests:</h2>
+                    <p> My Research Interests include Data Analytics, Data Mining and Text Analytics.</p>
+                <h2> Teaching:</h2>            
+                <p>I teach Introduction to Database and Operating System <a class = "btn btn-full" href = "Profile.html" >Course Website</a></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <p><a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p>
+</footer>
+
+</body>
+</html>

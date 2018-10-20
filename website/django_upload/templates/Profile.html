@@ -1,0 +1,195 @@
+{% load static %}
+<html>
+<head>
+<title>lol</title>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src={% static "rand.js" %}></script>
+<style>
+	#block { 
+	  position:absolute;
+	  width: 100%;
+	  height: 500px;
+  	  background: white;
+	  z-index:-1;
+	}
+	#main{
+		position: relative;
+		
+		width:100%;
+		height:100%;
+	}
+	#block img {
+  		position:relative; 
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+</style>
+</head>
+	<body>
+
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large" style="height:120px;"><div style="position:relative;top:40px;left:30px;font-size: 25px;">Department of <br>Computer Science and Engineering</div>
+	 <div style="position:relative;right:-1100px;top:-67px;"><img src="http://static1.squarespace.com/static/57713a8e2994cae381dd86fe/t/5a06f35d71c10b6a45e6b795/1537596325512/?format=1500w"  style="width:110px;height:110px;"></div>
+  </div>
+
+		<div class="w3-col m3  w3-pagination" style="position: relative;left:10px;top:40px;">
+        <div class="w3-card-4 w3-sand " style="height:650px;">
+			<div class="w3-container" style="position:relative;top:20px;">
+         <p class="w3-center"><img src="{% static "mypics.jpg" %}" class="w3-circle" style="height:206px;width:206px" alt="Avatar">
+			</p>
+		<div style="position:relative;left:20px;"><h1> Nitesh Jha<h3>M.Tech,M.Sc</h3></h1>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><br>Assistant Professor,CSE</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i><br> Address: Jagamara, Jagmohan Nagar,
+                    Bhubaneswar<br/>
+                    Odisha 751030<br/>
+                    Ph.no:8601547787<br/>
+                    email:niteshjha@soa.ac.in<br/>
+                    Cabin:C227, C-Block
+			 
+					</p><a href="About_me.html">About Me</a>
+	
+		</div>
+			</div>
+		</div>
+					
+	</div>
+	<div class="w3-row" id="">
+	<div class="w3-half  w3-container w3-center "   style="height:200px;width:100%;position:relative;top:-700px;left:90px">
+    <div class="w3-padding-64" style="width:100%">
+		<div id="block">
+		<img src="https://cdn.dribbble.com/users/1072657/screenshots/3554102/graph_loop.gif">
+			<img src="https://cdn.dribbble.com/users/1072657/screenshots/3554102/graph_loop.gif">
+			<img src="https://cdn.dribbble.com/users/1072657/screenshots/3554102/graph_loop.gif">
+			<img src="https://cdn.dribbble.com/users/1072657/screenshots/3554102/graph_loop.gif">
+			
+			
+	</div>
+      
+    </div>
+    <div class="w3-padding-64">
+      <a href="#" class=" w3-button  w3-indigo w3-block  w3-section w3-round-xlarge w3-padding-12" style="position:relative;right:-545px; width:300px;" >Announcements</a><br>
+      <a href="#work" class="  w3-button  w3-blue w3-block  w3-section w3-round-xlarge " style="position:relative;margin-bottom:1500px;right:-545px; width:300px;">Questions</a><br>
+      <a href="#lectures" class="  w3-button  w3-cyan w3-block  w3-section w3-round-xlarge " style="position:relative;right:-545px; width:300px;">Lectures</a><br>
+      <a href="#assignments" class="  w3-button  w3-aqua w3-block  w3-section w3-round-xlarge " style="position:relative;right:-545px; width:300px;">Assignments</a><br>
+	  <a href="#contact" class=" w3-button  w3-light-blue w3-block  w3-section w3-round-xlarge " style="position:relative;right:-545px; width:300px;">Text and Reference Literature</a>
+    </div>
+  </div>
+		</div>
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-highway-schoolbus w3-center" style="min-height:800px" id="assignments">
+	  <div class="w3-padding-64 w3-center">
+	  <h2>Assignments</h2>
+      <h4>Theory</h4>
+	
+   <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Date</th>
+            <th>Assignment</th>
+            <th>Submission Date</th>
+          </tr>{% for row1_1 in images1 %}
+          <tr class="w3-white">
+            <td> {{ row1_1.Date }}</td>
+            <td> 
+                <a href="{{  row1_1.Theory_Assignment.url }}">{{ row1_1.Theory_Assignment.name }}</a>
+                <hr />
+			</td>
+            <td> {{ row1_1.submit_Date }}</td>
+          </tr>
+			{% endfor %}
+        </table>
+     
+		    </div></div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Assignments</h2>
+      <h4>Lab</h4>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Date</th>
+            <th>Assignment</th>
+            <th>Optional Assignment</th>
+          </tr>{% for row1_2 in images2 %}
+          <tr class="w3-white">
+            <td> {{ row1_2.Date }}</td>
+            <td> 
+                <a href="{{ row1_2.Lab_Assignment.url }}">{{ row1_2.Lab_Assignment.name }}</a>
+                <hr />
+			</td>
+            <td> {{  row1_2.Lab_Optional_Assignment }}</td>
+          </tr>
+			{% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="lectures">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Lectures</h1>
+		<h4>Theory</h4>
+    </div>
+    <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Date</th>
+            <th>Lectures</th>
+            <th>Video Lectures</th>
+          </tr>{% for row2_1 in images3 %}
+          <tr class="w3-white">
+            <td> {{ row2_1.Date }}</td>
+            <td> 
+                <a href="{{ row2_1.Theory_Lectures.url }}">{{ row2_1.Theory_Lectures.name }}</a>
+                <hr />
+			</td>
+            <td>  <a href="{{ row2_1.Video_lectures.url }}">{{ row2_1.Video_lectures.name }}</a></td>
+          </tr>
+			{% endfor %}
+        </table>
+      </div>
+  </div>
+  <div class="w3-half w3-teal w3-container w3-center" style="height:700px">
+    
+      <div class="w3-padding-64">
+      <h1>Lectures</h1>
+		<h4>Lab</h4>
+    </div>
+   <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Date</th>
+            <th>Lecture Topic</th>
+          </tr>
+          <table class="w3-table">
+          {% for row2_2 in images4 %}
+          <tr class="w3-white">
+            <td> {{ row2_2.Date }}</td>
+            <td>  <a href="{{ row2_2.Lab_lectures.url }}">{{ row2_2.Lab_lectures.name }}</a><hr /></td>
+          </tr>
+			{% endfor %}
+        </table>
+        </table>
+      </div>
+  </div>
+
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-white w3-padding-16">
+  <p></p>
+</footer>
+
+</body>
+</html>
